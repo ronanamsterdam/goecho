@@ -23,8 +23,7 @@ func main() {
 	* @apiName GetEcho
 	* @apiParam (QueryString) {String} key1 value of key1
 	* @apiParam (QueryString) {String} [key2] value of key2
-	* @apiSuccess {Object} data the query params encoded as a JSON object
-	* @apiError {String} error.message the error message
+	* @apiSuccess (Success_200) data the query params encoded as a JSON object
 	 */
 	r.HandleFunc("/get", GetEcho).Methods("GET")
 	/**
@@ -32,8 +31,7 @@ func main() {
 	* @apiName PostEcho
 	* @apiParam (Body) {String} key1 value of key1
 	* @apiParam (Body) {String} [key2] value of key2
-	* @apiSuccess {Object} data the request body encoded as a JSON object
-	* @apiError {String} error.message the error message
+	* @apiSuccess (Success_200) data the request body encoded as a JSON object
 	 */
 	r.HandleFunc("/post", PostEcho).Methods("POST")
 
