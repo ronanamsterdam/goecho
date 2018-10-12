@@ -29,6 +29,8 @@ func GetEcho(w http.ResponseWriter, req *http.Request) {
 	fmt.Println("GET URL was:", req.URL)
 	fmt.Println("GET param were:", req.URL.Query()["key1"])
 	
+	fmt.Println(req.URL.String())
+	
 	jsonEnc := json.NewEncoder(w)
 
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
