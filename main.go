@@ -20,7 +20,7 @@ func main() {
 	r.HandleFunc("/", Intro)
 	
 	/**
-	* @api {GET} /get echoes back what you send it in the query params
+	* @api {GET} /get?key1=:key1&key2=:key2 echoes back what you send it in the query params
 	* @apiName GetEcho
 	* @apiParam {String} key1 value of key1
 	* @apiParam {String} [key2] value of key2
