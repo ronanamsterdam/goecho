@@ -25,8 +25,17 @@ func main() {
 	* @apiParam {String} key1 value of key1
 	* @apiParam {String} [key2] value of key2	
 	* @apiSuccess (Success_200) data the query params encoded as a JSON object
-	 */
+	*/
 	r.HandleFunc("/get", GetEcho).Methods("GET")
+	
+	/**
+	* @api {POST} /post echoes back what you send it in the request body
+	* @apiName PostEcho
+	* @apiParam (Body) {String} key1 value of key1
+	* @apiParam (Body) {String} [key2] value of key2
+	* @apiSuccess (Success_200) data the request body encoded as a JSON object
+	*/
+	r.HandleFunc("/post", PostEcho).Methods("POST")	
 	
 	loggingRouter := handlers.LoggingHandler(os.Stdout, r)
 
