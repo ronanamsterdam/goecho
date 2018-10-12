@@ -20,10 +20,10 @@ func main() {
 	r.HandleFunc("/", Intro)
 	
 	/**
-	* @api {GET} /get?key1=:key1&key2=:key2 echoes back what you send it in the query params
+	* @api {GET} /get echoes back what you send it in the query params
 	* @apiName GetEcho
-	* @apiParam {String} key1 value of key1
-	* @apiParam {String} [key2] value of key2
+	* @apiParam (Query String) {String} key1 value of key1
+	* @apiParam (Query String) {String} [key2] value of key2
 	* @apiSuccess (Success_200) data the query params encoded as a JSON object
 	* @apiError (400) error.message the error message
 	 */
