@@ -26,6 +26,8 @@ func GetEcho(w http.ResponseWriter, req *http.Request) {
 	queryParams := req.URL.Query()
 	
 	fmt.Println("GET params were:", req.URL.Query())
+	fmt.Println("GET URL was:", req.URL)
+	fmt.Println("GET param were:", req.URL.Query()["key1"])
 	
 	jsonEnc := json.NewEncoder(w)
 
