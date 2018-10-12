@@ -23,6 +23,9 @@ func Intro(w http.ResponseWriter, req *http.Request) {
 // GetEcho just responds with the query parameters given to the call
 func GetEcho(w http.ResponseWriter, req *http.Request) {
 	queryParams := req.URL.Query()
+	
+	fmt.Println("GET params were:", req.URL.Query())
+	
 	jsonEnc := json.NewEncoder(w)
 
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
