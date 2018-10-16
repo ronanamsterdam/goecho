@@ -62,6 +62,7 @@ The server will return
 }
 ```
 
+
 For this endpoint, the server only supports strings as values, anything else will lead to unintended behavior.
 
 ## Resources
